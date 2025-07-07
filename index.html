@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./global.css">
+</head>
+<body> 
+    <div class="titulo">
+        <h3>CRUD &lt;Número da Turma&gt;</h3>
+    </div>
+
+    <div class="registro">
+        <h1>Registro de Empregados</h1>
+    </div>
+
+    <div class="adicionar">
+        <button>Adicionar Novo Empregado</button>
+    </div>
+
+    <div class="tabela-container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Department</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rakesh</td>
+                <td>2345</td>
+                <td>IT</td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Priyanka</td>
+                <td>2500</td>
+                <td>HR</td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Anurag</td>
+                <td>4500</td>
+                <td>Sales</td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.querySelector('.adicionar button').addEventListener('click', function() {
+            alert('Abrirá o formulário para adicionar um novo empregado.');
+        });
+
+        document.querySelectorAll('.edit').forEach(function(button) {
+            button.addEventListener('click', function() {
+                alert('Abrirá o formulário para editar os dados do empregado.');
+            });
+        });
+
+        document.querySelectorAll('.delete').forEach(function(button) {
+            button.addEventListener('click', function() {
+                alert('Confirmará e realizará a exclusão do empregado.');
+            });
+        });
+    </script>
+</body>
+</html>
